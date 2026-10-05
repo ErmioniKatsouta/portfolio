@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Market Positioning & Industry Intelligence | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .results {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .results h2 {
+      margin-bottom: 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .result-number {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <div class="hero">
+
+      <div class="project-number">PROJECT 02</div>
+
+      <h1>Market Positioning & Industry Intelligence</h1>
+
+      <p class="lead">
+        Market and competitor intelligence project designed to identify
+        commercial opportunities, prioritize customer segments and define
+        a stronger market position for a B2B professional services company.
+      </p>
+
+    </div>
+
+    <div class="meta">
+
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Market Intelligence</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">12 Business Days</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Project Value</div>
+        <div class="meta-value">850 € + VAT</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business Consultant / Analyst</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>The Challenge</h2>
+
+      <div class="content">
+
+        <p>
+          The company had an established presence in the market, but its
+          commercial positioning had developed without a clear strategic
+          structure.
+        </p>
+
+        <p>
+          Management needed to understand where the company stood against
+          competing providers, which customer segments offered the strongest
+          commercial opportunity and how its services should be positioned
+          and priced.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Scope of Work</h2>
+
+      <div class="content">
+
+        <p>
+          The project combined market intelligence, competitor analysis,
+          customer segment evaluation and pricing research to create a
+          decision-ready positioning framework.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>Market Intelligence</strong>
+            <span>Buying criteria, market signals, demand drivers and commercial barriers.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Competitor Intelligence</strong>
+            <span>Six competitor profiles covering price, specialization, offers and positioning.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Segment Prioritization</strong>
+            <span>Assessment of need, budget, repeat potential, accessibility and sales friction.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Positioning Strategy</strong>
+            <span>Definition of the strongest defendable position within the competitive landscape.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Pricing Intelligence</strong>
+            <span>Offer architecture and pricing levels aligned with the selected position.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Commercial Roadmap</strong>
+            <span>60-day implementation plan with measurable commercial checkpoints.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="results">
+
+    <div class="container">
+
+      <h2>Key Results</h2>
+
+      <div class="result-grid">
+
+        <div>
+          <div class="result-number">86/100</div>
+          <div class="result-label">
+            Attractiveness score for the priority customer segment
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">6</div>
+          <div class="result-label">
+            Competitor profiles assessed across the market
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">980 €</div>
+          <div class="result-label">
+            Recommended price for the core project offer
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">+18%</div>
+          <div class="result-label">
+            Target increase in average project value
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Market Findings</h2>
+
+      <div class="content">
+
+        <p>
+          The analysis identified a competitive gap between low-cost
+          execution providers and high-end advisory firms.
+        </p>
+
+        <p>
+          Buyers placed the greatest value on clear scope, transparent
+          pricing, specialist expertise, speed of delivery and evidence
+          that the work would support a specific business decision.
+        </p>
+
+        <p>
+          This created an opportunity to compete on structured specialist
+          delivery rather than on price alone.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Priority Segment</h2>
+
+      <div class="content">
+
+        <p>
+          Four customer segments were evaluated against commercial need,
+          budget capacity, repeat potential, accessibility and sales
+          friction.
+        </p>
+
+        <p>
+          SMEs with 10-50 employees achieved the highest overall
+          attractiveness score at 86/100 and were selected as the primary
+          commercial target.
+        </p>
+
+        <p>
+          Scale-ups represented a secondary opportunity, while micro
+          businesses showed greater price sensitivity and enterprise
+          accounts required longer procurement and sales cycles.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Positioning Decision</h2>
+
+      <div class="content">
+
+        <p class="decision">
+          REPOSITION
+        </p>
+
+        <p>
+          The recommended position was defined as a specialized
+          mid-premium partner: positioned above generalist execution
+          providers while remaining more flexible and accessible than
+          traditional premium consulting firms.
+        </p>
+
+        <p>
+          The commercial proposition was redesigned around clearly scoped,
+          decision-oriented projects rather than a broad catalogue of
+          general services.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Offer Architecture</h2>
+
+      <div class="content">
+
+        <p>
+          The final pricing structure established four clear commercial
+          entry points: a 420 € Business Diagnostic, a 980 € Core Project,
+          a 1,450 € Growth Sprint and a 480 € monthly Management Retainer.
+        </p>
+
+        <p>
+          The Core Project became the main pricing anchor, supporting the
+          new mid-premium position while maintaining a clear distinction
+          from both low-cost providers and premium advisory firms.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container section-grid">
+
+      <h2>Business Value</h2>
+
+      <div class="content">
+
+        <p>
+          The project converted a broad and inconsistent commercial
+          proposition into a structured market position with a defined
+          target customer, clearer pricing and measurable commercial
+          priorities.
+        </p>
+
+        <p>
+          A 60-day implementation plan was established to validate the new
+          positioning through qualified conversations, proposals,
+          conversion rate and realized average project value before further
+          price increases or expansion.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="documents">
+
+    <div class="container">
+
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the original project brief and commercial proposal, followed
+        by the completed market intelligence report including competitor
+        analysis, segment prioritization, positioning, pricing and final
+        recommendations.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button secondary"
+          href="Project_02_Client_Brief_Proposal.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_02_Final_Deliverable.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW FINAL DELIVERABLE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+
+</footer>
+
+</body>
+</html>
