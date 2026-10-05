@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sales Intelligence & Executive Reporting | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .results {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .results h2 {
+      margin-bottom: 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .result-number {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <div class="hero">
+
+      <div class="project-number">
+        PROJECT 06 · SELECTED PROJECT
+      </div>
+
+      <h1>Sales Intelligence & Executive Reporting</h1>
+
+      <p class="lead">
+        Sales intelligence framework designed to transform fragmented
+        commercial data into clear KPIs, performance trends, customer
+        insights and management-ready reporting.
+      </p>
+
+    </div>
+
+    <div class="meta">
+
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Sales Intelligence & Reporting</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Analysis Period</div>
+        <div class="meta-value">12 Months</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">10 Business Days</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business & Data Analyst</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>The Challenge</h2>
+
+      <div class="content">
+
+        <p>
+          Sales information was available across multiple commercial records,
+          but management lacked a single structured view of performance.
+        </p>
+
+        <p>
+          Monthly revenue totals alone could not explain whether growth came
+          from new customers, repeat business, stronger channels or temporary
+          large transactions.
+        </p>
+
+        <p>
+          The objective was to move from descriptive reporting toward
+          decision-oriented sales intelligence: what changed, why it changed,
+          whether targets were being achieved and where commercial attention
+          should be focused next.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Scope of Work</h2>
+
+      <div class="content">
+
+        <p>
+          The project structured a management reporting framework connecting
+          sales performance with customer, channel, target and pipeline data.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>Data Structure</strong>
+            <span>Organization of sales records into a consistent reporting structure.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Sales KPIs</strong>
+            <span>Revenue, growth, target attainment, average deal and repeat sales.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Performance Analysis</strong>
+            <span>Monthly and quarterly sales trends against targets.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Customer Intelligence</strong>
+            <span>New versus repeat revenue and customer concentration.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Channel Analysis</strong>
+            <span>Direct, partner, inbound and existing-client contribution.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Executive Reporting</strong>
+            <span>Management KPIs, exceptions, insights and actions.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="results">
+
+    <div class="container">
+
+      <h2>Key Results</h2>
+
+      <div class="result-grid">
+
+        <div>
+          <div class="result-number">901K €</div>
+          <div class="result-label">
+            Annual sales analyzed
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">102.2%</div>
+          <div class="result-label">
+            Annual target attainment
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">54%</div>
+          <div class="result-label">
+            Revenue generated by repeat clients
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">31%</div>
+          <div class="result-label">
+            Proposal win rate
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Sales Performance</h2>
+
+      <div class="content">
+
+        <p>
+          Annual sales reached 901,000 €, with performance strengthening
+          during the second half of the year.
+        </p>
+
+        <p>
+          Monthly sales increased from 61,000 € in January to 92,000 €
+          in December, while the business finished above its annual
+          commercial target.
+        </p>
+
+        <p>
+          The reporting framework separates sustainable growth from
+          temporary deal effects so that management can evaluate the
+          quality of commercial momentum rather than relying only on
+          headline revenue.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Customer Intelligence</h2>
+
+      <div class="content">
+
+        <p>
+          Repeat clients generated 54% of annual sales, creating a stable
+          commercial base while new customers contributed the remaining 46%.
+        </p>
+
+        <p>
+          The top 10 customers represented 43% of total sales. The level
+          remained manageable but was included as a recurring management
+          KPI to prevent future dependence on a small number of accounts.
+        </p>
+
+        <p>
+          Average deal value was also incorporated into the reporting
+          framework to support pricing, customer and channel decisions.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Channel Performance</h2>
+
+      <div class="content">
+
+        <p>
+          Direct sales represented 38% of revenue and remained the largest
+          commercial channel.
+        </p>
+
+        <p>
+          Partner referrals generated 27%, inbound activity 19% and
+          expansion from existing clients 16%.
+        </p>
+
+        <p>
+          Partner-sourced opportunities were identified as a strategic
+          growth area because they combined lower acquisition effort with
+          attractive deal quality. The recommendation was therefore to
+          track partner performance as a separate commercial channel.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Pipeline & Conversion</h2>
+
+      <div class="content">
+
+        <p>
+          Proposal win rate was measured at 31%, with material differences
+          between opportunity sources.
+        </p>
+
+        <p>
+          The analysis recommended increasing qualified pipeline coverage
+          from approximately 2.4x to at least 3.0x of the next 90-day
+          sales target.
+        </p>
+
+        <p>
+          This changes management focus from raw lead volume toward
+          qualified opportunities with a realistic probability of
+          conversion.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Executive Reporting</h2>
+
+      <div class="content">
+
+        <p>
+          The proposed management report was deliberately kept concise.
+          Its purpose is to answer five commercial questions every month.
+        </p>
+
+        <p>
+          Are sales on target? What changed versus the previous period?
+          Which customers and channels explain the change? Is the forward
+          pipeline sufficient? What action is required before the next
+          management review?
+        </p>
+
+        <p>
+          The resulting reporting structure combines headline KPIs,
+          performance trends, customer and channel contribution,
+          pipeline exceptions and a short management action register.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Management Actions</h2>
+
+      <div class="content">
+
+        <p>
+          <strong>Partner reporting:</strong> track partner-sourced pipeline,
+          conversion and average deal value independently.
+        </p>
+
+        <p>
+          <strong>Pipeline coverage:</strong> maintain at least 3.0x
+          qualified coverage against the next 90-day sales target.
+        </p>
+
+        <p>
+          <strong>Repeat revenue:</strong> flag important accounts showing
+          declining order frequency or commercial value.
+        </p>
+
+        <p>
+          <strong>Conversion analysis:</strong> separate poor lead quality
+          from pricing, proposal and sales-process issues.
+        </p>
+
+        <p>
+          <strong>Reporting discipline:</strong> use one KPI definition set
+          and one management view across recurring commercial reviews.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Final Recommendation</h2>
+
+      <div class="content">
+
+        <p class="decision">
+          KEEP THE REPORTING LAYER SIMPLE AND ACTION-ORIENTED
+        </p>
+
+        <p>
+          The value of sales intelligence is not the number of charts
+          produced. It is the ability to identify performance changes
+          early and connect them with a specific commercial decision.
+        </p>
+
+        <p>
+          Management should therefore prioritize consistent KPI definitions,
+          stronger pipeline visibility and disciplined interpretation of
+          customer and channel performance.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="documents">
+
+    <div class="container">
+
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the project brief and proposal, followed by the complete
+        sales intelligence deliverable covering KPIs, sales performance,
+        customer and channel analysis, pipeline health and executive
+        management reporting.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button secondary"
+          href="Project_06_Client_Brief_Proposal.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_06_Final_Deliverable.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW FINAL DELIVERABLE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+</footer>
+
+</body>
+</html>
