@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BE Aligned - Ordering & Ticketing Platform | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .workflow {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+    }
+
+    .workflow-item {
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .workflow-number {
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      letter-spacing: 1px;
+    }
+
+    .workflow-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .workflow-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .highlight {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .highlight h2 {
+      margin-bottom: 35px;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .highlight-number {
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .highlight-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <div class="hero">
+
+      <div class="project-number">
+        PROJECT 09 · CLIENT PROJECT
+      </div>
+
+      <h1>BE Aligned - Ordering & Ticketing Platform</h1>
+
+      <p class="lead">
+        A professional digital platform combining structured ordering,
+        support ticketing and custom software integration within a
+        unified operational environment.
+      </p>
+
+    </div>
+
+    <div class="meta">
+
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Digital Platform</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Core Systems</div>
+        <div class="meta-value">Ordering & Ticketing</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Environment</div>
+        <div class="meta-value">Professional Portal</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Focus</div>
+        <div class="meta-value">Digital Delivery</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>The Challenge</h2>
+
+      <div class="content">
+
+        <p>
+          The project required a professional digital environment
+          capable of bringing key operational processes together
+          rather than handling them through disconnected workflows.
+        </p>
+
+        <p>
+          Ordering, support requests and custom functionality needed
+          to operate as parts of the same platform, creating a more
+          structured experience for professional users and a clearer
+          operational process behind the service.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Solution Framework</h2>
+
+      <div class="content">
+
+        <p>
+          The platform was structured around a professional portal
+          connecting ordering, support ticketing and custom software
+          functionality.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>Professional Portal</strong>
+            <span>
+              Central digital environment for the core functions
+              associated with the service.
+            </span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Ordering</strong>
+            <span>
+              Structured workflow supporting the creation and
+              management of orders.
+            </span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Ticketing</strong>
+            <span>
+              Organized process for submitting and managing
+              support requests.
+            </span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Custom Integration</strong>
+            <span>
+              Custom functionality connecting the platform with
+              the operational requirements of the project.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="highlight">
+
+    <div class="container">
+
+      <h2>Functional Structure</h2>
+
+      <div class="highlight-grid">
+
+        <div>
+          <div class="highlight-number">Portal</div>
+          <div class="highlight-label">
+            Unified professional digital environment
+          </div>
+        </div>
+
+        <div>
+          <div class="highlight-number">Ordering</div>
+          <div class="highlight-label">
+            Structured order workflow
+          </div>
+        </div>
+
+        <div>
+          <div class="highlight-number">Ticketing</div>
+          <div class="highlight-label">
+            Organized support workflow
+          </div>
+        </div>
+
+        <div>
+          <div class="highlight-number">Integration</div>
+          <div class="highlight-label">
+            Custom operational functionality
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Ordering Workflow</h2>
+
+      <div class="content">
+
+        <p>
+          The ordering component was approached as a structured
+          operational workflow rather than as an isolated form
+          or feature.
+        </p>
+
+        <div class="workflow">
+
+          <div class="workflow-item">
+            <div class="workflow-number">01</div>
+            <div>
+              <strong>Portal Access</strong>
+              <span>
+                The professional user enters the digital environment.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">02</div>
+            <div>
+              <strong>Order Creation</strong>
+              <span>
+                A new order is initiated through a defined process.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">03</div>
+            <div>
+              <strong>Validation</strong>
+              <span>
+                Required information is reviewed before submission.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">04</div>
+            <div>
+              <strong>Operational Status</strong>
+              <span>
+                The order follows an organized status-based workflow.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">05</div>
+            <div>
+              <strong>Support Connection</strong>
+              <span>
+                Where support is required, the process can connect
+                with the ticketing workflow.
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Ticketing Workflow</h2>
+
+      <div class="content">
+
+        <p>
+          Support requests were structured around a clear ticket
+          lifecycle, creating a more organized way to handle
+          operational issues within the digital environment.
+        </p>
+
+        <div class="workflow">
+
+          <div class="workflow-item">
+            <div class="workflow-number">01</div>
+            <div>
+              <strong>New Request</strong>
+              <span>
+                A support request enters the ticketing process.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">02</div>
+            <div>
+              <strong>In Progress</strong>
+              <span>
+                The request moves into active handling.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">03</div>
+            <div>
+              <strong>Waiting</strong>
+              <span>
+                Additional information or action may be required.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">04</div>
+            <div>
+              <strong>Resolved</strong>
+              <span>
+                The operational issue is addressed.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">05</div>
+            <div>
+              <strong>Closed</strong>
+              <span>
+                The support case is completed and closed.
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Functional Analysis</h2>
+
+      <div class="content">
+
+        <p>
+          The project was approached from the perspective of
+          functional requirements and digital workflows:
+          what users need to do, what information is required
+          at each stage and how the different platform components
+          interact.
+        </p>
+
+        <p>
+          Particular attention was given to the relationship between
+          ordering and support. Instead of treating support as a
+          completely separate process, ticketing becomes part of the
+          broader operating environment surrounding the platform.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Delivery Approach</h2>
+
+      <div class="content">
+
+        <div class="workflow">
+
+          <div class="workflow-item">
+            <div class="workflow-number">01</div>
+            <div>
+              <strong>Requirements Mapping</strong>
+              <span>
+                Translate business needs into structured functional
+                requirements.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">02</div>
+            <div>
+              <strong>Workflow Design</strong>
+              <span>
+                Organize ordering and ticketing into clear digital
+                processes.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">03</div>
+            <div>
+              <strong>Platform Coordination</strong>
+              <span>
+                Connect functional requirements with the digital
+                delivery process.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">04</div>
+            <div>
+              <strong>Functional Validation</strong>
+              <span>
+                Review key user scenarios and platform behaviour.
+              </span>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number">05</div>
+            <div>
+              <strong>Delivery</strong>
+              <span>
+                Bring the required functions together within the
+                professional portal environment.
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Business Value</h2>
+
+      <div class="content">
+
+        <p class="decision">
+          FROM DISCONNECTED OPERATIONAL TASKS TO A STRUCTURED
+          DIGITAL WORKFLOW.
+        </p>
+
+        <p>
+          The project demonstrates how ordering, support and custom
+          functionality can be brought together within a single
+          professional platform rather than operating as separate
+          digital processes.
+        </p>
+
+        <p>
+          Its value lies in the connection between business
+          requirements and digital delivery: translating operational
+          needs into a structured platform experience.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="documents">
+
+    <div class="container">
+
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the reconstructed project brief and the functional
+        delivery analysis covering requirements, ordering,
+        ticketing, workflows and digital delivery.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button secondary"
+          href="Project_09_Client_Brief_Proposal.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_09_Final_Deliverable.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW FINAL DELIVERABLE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+</footer>
+
+</body>
+</html>
