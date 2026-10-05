@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Business Launch & Financial Feasibility | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .results {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .results h2 {
+      margin-bottom: 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .result-number {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+    <div class="hero">
+      <div class="project-number">PROJECT 01</div>
+
+      <h1>Business Launch & Financial Feasibility</h1>
+
+      <p class="lead">
+        Business and financial assessment for the launch of a new professional
+        services business, combining market positioning, pricing, financial
+        feasibility and commercial planning.
+      </p>
+    </div>
+
+    <div class="meta">
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Business Analysis</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">15 Business Days</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Project Value</div>
+        <div class="meta-value">950 € + VAT</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business Consultant / Analyst</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container section-grid">
+      <h2>The Challenge</h2>
+
+      <div class="content">
+        <p>
+          The business owner was preparing to launch a boutique professional
+          services company and needed to evaluate the commercial and financial
+          viability of the business before committing capital and creating
+          recurring operating costs.
+        </p>
+
+        <p>
+          The project focused on determining the appropriate target customer,
+          service structure, pricing model, required monthly revenue and sales
+          activity needed to operate sustainably.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-grid">
+      <h2>Scope of Work</h2>
+
+      <div class="content">
+        <p>
+          The assignment combined commercial analysis and financial modelling
+          to convert the initial business concept into a structured launch
+          decision.
+        </p>
+
+        <div class="scope">
+          <div class="scope-item">
+            <strong>Market Analysis</strong>
+            <span>Market structure, customer needs and competitive environment.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Competitor Analysis</strong>
+            <span>Comparison of competing offers, pricing and market positioning.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Offer & Pricing</strong>
+            <span>Service structure, minimum project fee and commercial pricing.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Financial Feasibility</strong>
+            <span>Revenue, costs, break-even and 12-month financial model.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Commercial KPIs</strong>
+            <span>Lead flow, conversion, average project value and utilization.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Launch Roadmap</strong>
+            <span>90-day action plan with measurable decision checkpoints.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="results">
+    <div class="container">
+      <h2>Key Results</h2>
+
+      <div class="result-grid">
+        <div>
+          <div class="result-number">34,560 €</div>
+          <div class="result-label">12-month revenue in the Base Scenario</div>
+        </div>
+
+        <div>
+          <div class="result-number">17,813 €</div>
+          <div class="result-label">Operating result in the Base Scenario</div>
+        </div>
+
+        <div>
+          <div class="result-number">1,193 €</div>
+          <div class="result-label">Monthly operating break-even</div>
+        </div>
+
+        <div>
+          <div class="result-number">18%</div>
+          <div class="result-label">Overall lead-to-client conversion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container section-grid">
+      <h2>Commercial Findings</h2>
+
+      <div class="content">
+        <p>
+          The analysis identified a viable market position between low-cost
+          freelance services and higher-priced boutique consulting. The final
+          service model was structured around clearly defined projects with
+          fixed scope, measurable outputs and transparent pricing.
+        </p>
+
+        <p>
+          The commercial model produced 22 qualified leads per month, a 41%
+          lead-to-proposal conversion rate and a 44% proposal-to-client
+          conversion rate. Average project value reached 720 €, while referral
+          and repeat revenue represented 24% of the revenue mix.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-grid">
+      <h2>Financial Assessment</h2>
+
+      <div class="content">
+        <p>
+          Under the Base Scenario, first-year revenue reached 34,560 €.
+          With fixed operating costs of 1,050 € per month and variable costs
+          equal to 12% of revenue, the model generated an operating result of
+          17,813 € before taxes, social security obligations and owner
+          compensation.
+        </p>
+
+        <p>
+          Monthly operating break-even was calculated at 1,193 €, while a
+          management safety threshold of 1,700 € was established to provide
+          additional operating flexibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-grid">
+      <h2>Final Decision</h2>
+
+      <div class="content">
+        <p class="decision">
+          GO
+        </p>
+
+        <p>
+          The launch was assessed as financially viable under a lean operating
+          structure, without permanent staffing at the initial stage and with
+          a maximum setup budget of 2,400 €.
+        </p>
+
+        <p>
+          The first 90 days were defined as a validation period, with pricing,
+          conversion, average project value and monthly revenue used as the
+          primary decision points before increasing fixed costs or expanding
+          capacity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="documents">
+    <div class="container">
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the original project scope and commercial proposal, followed by
+        the completed business and financial assessment with the analysis,
+        financial model, KPIs and final recommendations.
+      </p>
+
+      <div class="buttons">
+        <a
+          class="button secondary"
+          href="Project_01_Client_Brief_Proposal.pdf"
+          target="_blank">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_01_Final_Deliverable.pdf"
+          target="_blank">
+          VIEW FINAL DELIVERABLE
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+</footer>
+
+</body>
+</html>
