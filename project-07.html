@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Financial Performance & Cash-Flow Intelligence | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .results {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .results h2 {
+      margin-bottom: 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .result-number {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <div class="hero">
+
+      <div class="project-number">
+        PROJECT 07 · ADVANCED PORTFOLIO PROJECT
+      </div>
+
+      <h1>Financial Performance & Cash-Flow Intelligence</h1>
+
+      <p class="lead">
+        Financial performance analysis connecting profitability,
+        operating margins, cash-flow behaviour, working capital
+        and break-even requirements with management decisions.
+      </p>
+
+    </div>
+
+    <div class="meta">
+
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Financial & Cash-Flow Analysis</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Analysis Period</div>
+        <div class="meta-value">12 Months</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">12 Business Days</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business & Financial Analyst</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>The Challenge</h2>
+
+      <div class="content">
+
+        <p>
+          The business was profitable on an annual basis, but monthly
+          cash availability remained uneven.
+        </p>
+
+        <p>
+          Management therefore needed more than a traditional profit
+          and loss view. The key question was whether operating
+          profitability was converting into sufficient and predictable
+          cash to support the business.
+        </p>
+
+        <p>
+          The project connected P&amp;L performance with cash-flow
+          behaviour, working capital, break-even requirements and
+          management scenarios.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Scope of Work</h2>
+
+      <div class="content">
+
+        <p>
+          The analysis combined financial performance and liquidity
+          indicators into a single decision framework.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>P&amp;L Performance</strong>
+            <span>Revenue, gross profit, EBITDA and operating margin.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Cost Structure</strong>
+            <span>Direct costs, operating expenses and fixed-cost exposure.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Cash-Flow Analysis</strong>
+            <span>Monthly cash movement and closing liquidity position.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Working Capital</strong>
+            <span>Receivables, collection timing and cash-conversion pressure.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Break-even</strong>
+            <span>Required monthly revenue and operating safety threshold.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Scenario Analysis</strong>
+            <span>Downside, base and improvement financial scenarios.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="results">
+
+    <div class="container">
+
+      <h2>Key Results</h2>
+
+      <div class="result-grid">
+
+        <div>
+          <div class="result-number">1.08M €</div>
+          <div class="result-label">
+            Annual revenue analyzed
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">6.7%</div>
+          <div class="result-label">
+            EBITDA margin
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">82K €</div>
+          <div class="result-label">
+            Monthly operating break-even
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">42K €</div>
+          <div class="result-label">
+            Lowest monthly cash position
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Financial Performance</h2>
+
+      <div class="content">
+
+        <p>
+          Annual revenue reached 1,080,000 €, producing gross profit
+          of 432,000 € and a gross margin of 40%.
+        </p>
+
+        <p>
+          Operating expenses totalled 360,000 €, leaving EBITDA of
+          72,000 € and an operating margin of 6.7%.
+        </p>
+
+        <p>
+          The company was therefore profitable, but the operating
+          margin provided limited protection against delayed collections,
+          unexpected expenditure or periods of weaker sales.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Cash-Flow Intelligence</h2>
+
+      <div class="content">
+
+        <p>
+          The cash-flow view identified a significant liquidity trough
+          during the middle of the year.
+        </p>
+
+        <p>
+          Closing cash declined from 74,000 € in January to a low point
+          of 42,000 € in June before recovering to 91,000 € by year-end.
+        </p>
+
+        <p>
+          The pattern demonstrated an important management distinction:
+          a profitable company can still experience operating pressure
+          when cash enters the business materially later than costs
+          leave it.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Working Capital</h2>
+
+      <div class="content">
+
+        <p>
+          Average customer collection timing was modelled at 52 days,
+          while payroll and a significant share of operating costs were
+          paid within the same month.
+        </p>
+
+        <p>
+          This created a structural cash-conversion gap.
+        </p>
+
+        <p>
+          Reducing average collection time from 52 to approximately
+          42 days was estimated to release around 30,000 € of cash
+          from working capital, subject to sales mix and invoice timing.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Break-even Analysis</h2>
+
+      <div class="content">
+
+        <p>
+          At the existing cost and margin structure, monthly operating
+          break-even was approximately 82,000 € of revenue.
+        </p>
+
+        <p>
+          The break-even point was treated as a management floor rather
+          than a commercial target.
+        </p>
+
+        <p>
+          A safer operating threshold of approximately 90,000 € per
+          month was recommended to provide additional protection against
+          collection delays and normal cost volatility.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Scenario Analysis</h2>
+
+      <div class="content">
+
+        <p>
+          Three operating scenarios were developed to test the resilience
+          of profitability and liquidity.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>Downside Scenario</strong>
+            <span>
+              990,000 € revenue, 36,000 € EBITDA and 48,000 €
+              projected closing cash.
+            </span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Base Scenario</strong>
+            <span>
+              1,080,000 € revenue, 72,000 € EBITDA and 91,000 €
+              projected closing cash.
+            </span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Improvement Scenario</strong>
+            <span>
+              1,125,000 € revenue, 108,000 € EBITDA and 132,000 €
+              projected closing cash.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Management KPIs</h2>
+
+      <div class="content">
+
+        <p>
+          Monthly financial reporting should connect profitability
+          and liquidity instead of monitoring them independently.
+        </p>
+
+        <p>
+          The recommended management indicators include revenue,
+          gross margin, EBITDA margin, monthly break-even coverage,
+          closing cash, collection days, receivables over 60 days
+          and a rolling 13-week cash forecast.
+        </p>
+
+        <p>
+          A minimum operating cash buffer of 50,000 € was also introduced
+          as an early-warning management threshold.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>90-Day Plan</h2>
+
+      <div class="content">
+
+        <p>
+          <strong>Days 1-30 - Visibility:</strong>
+          introduce a rolling 13-week cash forecast, receivables ageing
+          review and weekly collection priorities.
+        </p>
+
+        <p>
+          <strong>Days 31-60 - Conversion:</strong>
+          tighten invoice follow-up, address weak payment patterns and
+          introduce deposits or milestone billing where commercially
+          appropriate.
+        </p>
+
+        <p>
+          <strong>Days 61-90 - Margin:</strong>
+          review low-margin work, pricing exceptions and fixed-cost
+          commitments before approving additional recurring expenditure.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Final Recommendation</h2>
+
+      <div class="content">
+
+        <p class="decision">
+          PROTECT LIQUIDITY BEFORE EXPANDING THE FIXED COST BASE
+        </p>
+
+        <p>
+          The company is profitable, but the cash cycle creates avoidable
+          operating pressure.
+        </p>
+
+        <p>
+          Management should improve collection speed, maintain a minimum
+          50,000 € operating cash buffer and use the 82,000 € monthly
+          break-even level as an early-warning threshold.
+        </p>
+
+        <p>
+          Additional fixed costs should be approved only when the rolling
+          cash forecast remains above the minimum liquidity buffer under
+          both the base and downside scenarios.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="documents">
+
+    <div class="container">
+
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the project brief and the complete financial intelligence
+        deliverable covering P&amp;L performance, cash flow, working capital,
+        break-even analysis, operating scenarios and management actions.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button secondary"
+          href="Project_07_Client_Brief_Proposal.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_07_Final_Deliverable.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW FINAL DELIVERABLE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+</footer>
+
+</body>
+</html>
