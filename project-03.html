@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Business Plan & Investment Readiness | Ermioni Katsouta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #111;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 85px;
+    }
+
+    .meta-item {
+      padding: 25px 22px 25px 0;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 0 0 80px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #444;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 35px;
+      margin-top: 30px;
+    }
+
+    .scope-item {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .scope-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .scope-item span {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .results {
+      background: #f5f5f3;
+      padding: 75px 0;
+      margin-bottom: 80px;
+    }
+
+    .results h2 {
+      margin-bottom: 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .result-number {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .decision {
+      font-size: 26px !important;
+      color: #202020 !important;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .documents {
+      padding: 75px 0 100px;
+      border-top: 1px solid #ddd;
+    }
+
+    .documents-intro {
+      max-width: 680px;
+      color: #555;
+      font-size: 17px;
+      margin: 15px 0 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 22px;
+      background: #202020;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: #202020;
+      border: 1px solid #202020;
+    }
+
+    .button.secondary:hover {
+      background: #f4f4f4;
+    }
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+      padding: 30px 0 45px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .scope {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="name" href="index.html">Ermioni Katsouta</a>
+    <a class="back" href="index.html">Back to Selected Projects</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <div class="hero">
+
+      <div class="project-number">PROJECT 03</div>
+
+      <h1>Business Plan & Investment Readiness</h1>
+
+      <p class="lead">
+        Business planning and financial assessment project designed to
+        evaluate growth potential, capital requirements and investment
+        readiness through a structured three-year operating and financial plan.
+      </p>
+
+    </div>
+
+    <div class="meta">
+
+      <div class="meta-item">
+        <div class="meta-label">Project Type</div>
+        <div class="meta-value">Business Planning</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">20 Business Days</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Project Value</div>
+        <div class="meta-value">1,350 € + VAT</div>
+      </div>
+
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business Consultant / Analyst</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>The Challenge</h2>
+
+      <div class="content">
+
+        <p>
+          The project required the development of an integrated business
+          plan capable of supporting both an internal investment decision
+          and future discussions with financing or investment partners.
+        </p>
+
+        <p>
+          The central question was not simply whether the business could
+          grow, but whether the proposed operating model could generate
+          sufficient revenue, margin and cash capacity to justify the
+          required capital commitment.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Scope of Work</h2>
+
+      <div class="content">
+
+        <p>
+          The project combined strategic planning, commercial assumptions,
+          operational requirements and financial modelling into one
+          decision framework.
+        </p>
+
+        <div class="scope">
+
+          <div class="scope-item">
+            <strong>Business Model</strong>
+            <span>Customer groups, value proposition, services and revenue logic.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Market Assessment</strong>
+            <span>Demand, customer segments, competition and market positioning.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Commercial Plan</strong>
+            <span>Pricing, acquisition channels, pipeline and conversion assumptions.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Operating Model</strong>
+            <span>Capacity, staffing requirements and fixed and variable cost structure.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Financial Forecast</strong>
+            <span>Three-year revenue, gross profit, operating expenses and EBITDA model.</span>
+          </div>
+
+          <div class="scope-item">
+            <strong>Investment Readiness</strong>
+            <span>Funding requirement, use of funds, scenarios, risks and investment milestones.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="results">
+
+    <div class="container">
+
+      <h2>Key Results</h2>
+
+      <div class="result-grid">
+
+        <div>
+          <div class="result-number">75K €</div>
+          <div class="result-label">
+            Initial funding requirement
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">168K €</div>
+          <div class="result-label">
+            Base-case Year 1 revenue
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">294K €</div>
+          <div class="result-label">
+            Projected Year 3 revenue
+          </div>
+        </div>
+
+        <div>
+          <div class="result-number">23.9%</div>
+          <div class="result-label">
+            Projected Year 3 EBITDA margin
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Business Model</h2>
+
+      <div class="content">
+
+        <p>
+          The final model focused on B2B customers with recurring needs
+          and clearly scoped projects.
+        </p>
+
+        <p>
+          Revenue was structured across core projects, higher-value
+          implementation engagements and recurring support, reducing
+          dependence on a single type of commercial activity.
+        </p>
+
+        <p>
+          Growth was designed to come primarily from improved utilization
+          and average project value before materially increasing the
+          permanent cost base.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Financial Outlook</h2>
+
+      <div class="content">
+
+        <p>
+          The base case projected revenue of 168,000 € in Year 1,
+          228,000 € in Year 2 and 294,000 € in Year 3.
+        </p>
+
+        <p>
+          EBITDA was projected to increase from 22,500 € in Year 1
+          to 44,800 € in Year 2 and 70,400 € in Year 3 as fixed costs
+          were absorbed across a larger revenue base.
+        </p>
+
+        <p>
+          The corresponding EBITDA margin improved from 13.4% to
+          19.6% and finally 23.9% in Year 3.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Funding Structure</h2>
+
+      <div class="content">
+
+        <p>
+          The initial funding requirement was assessed at 75,000 €.
+          The recommended structure combined founder capital, equipment
+          finance and a working-capital facility.
+        </p>
+
+        <p>
+          Capital was allocated across equipment and systems,
+          working-capital reserves, commercial development and a
+          contingency buffer.
+        </p>
+
+        <p>
+          The funding plan deliberately protected liquidity rather than
+          directing the entire investment toward immediate expansion.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Scenario Analysis</h2>
+
+      <div class="content">
+
+        <p>
+          Three scenarios were assessed to test the resilience of the
+          business model.
+        </p>
+
+        <p>
+          The conservative scenario produced 132,000 € in Year 1 revenue
+          and 6,800 € EBITDA. The base scenario produced 168,000 € in
+          revenue and 22,500 € EBITDA, while the growth scenario reached
+          205,000 € in revenue and 38,900 € EBITDA.
+        </p>
+
+        <p>
+          The analysis showed that the business could remain operationally
+          positive under slower growth, although cash reserves became
+          increasingly important in the conservative case.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Investment Readiness</h2>
+
+      <div class="content">
+
+        <p>
+          The project concluded that the business was investment-ready
+          with conditions.
+        </p>
+
+        <p>
+          Before the second phase of capital deployment, management should
+          confirm a rolling 90-day pipeline of at least 45,000 €, gross
+          margin above 55%, cash runway of at least four months and
+          proposal conversion of at least 30%.
+        </p>
+
+        <p>
+          These checkpoints transformed the investment decision from a
+          one-time commitment into a measurable staged process.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container section-grid">
+
+      <h2>Final Decision</h2>
+
+      <div class="content">
+
+        <p class="decision">
+          PROCEED WITH STAGED INVESTMENT
+        </p>
+
+        <p>
+          The financial model supported the growth plan, but the main risk
+          remained the speed at which the commercial pipeline could be
+          converted into realized revenue.
+        </p>
+
+        <p>
+          A staged investment approach was therefore recommended, with
+          additional capital deployment linked directly to commercial
+          performance, margin and cash-runway thresholds.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="documents">
+
+    <div class="container">
+
+      <h2>Project Documents</h2>
+
+      <p class="documents-intro">
+        Review the project brief and commercial proposal, followed by the
+        completed business plan covering the operating model, financial
+        forecast, funding structure, scenarios and investment-readiness
+        decision.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button secondary"
+          href="Project_03_Client_Brief_Proposal.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW CLIENT BRIEF & PROPOSAL
+        </a>
+
+        <a
+          class="button"
+          href="Project_03_Final_Deliverable.pdf"
+          target="_blank"
+          rel="noopener">
+          VIEW FINAL DELIVERABLE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Ermioni Katsouta
+  </div>
+</footer>
+
+</body>
+</html>
